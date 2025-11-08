@@ -1,0 +1,53 @@
+<style>
+    .first-section-class {
+        text-align: center;
+        padding: 20px;
+        background-color: {{ section.settings.background-color }};
+        color:{{ section.settings.text-color }};
+        border: 2px solid {{ section.settings.border-color }};
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<h1 class="first-section-class">{{ section.settings.section-inner-text }}</h1>
+
+{% schema %}
+  {
+    "name": "first-section",
+    "tag": "section",
+    "class": "first-section-class",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section-inner-text",
+        "label": "heading",
+        "default": "My first shopify custmized section"
+      },
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color",
+        "default": "#f0f0f0"
+      },
+      {
+        "type": "color",
+        "id": "text-color",
+        "label": "Text Color",
+        "default": "#000000"
+      },{
+        "type": "color",
+        "id":"border-color",
+        "label":"Border Color",
+        "default":"#cccccc"
+      }
+    ],
+    "presets": [
+      {
+        "name": "first-section-preset",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

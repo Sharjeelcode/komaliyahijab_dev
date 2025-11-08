@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "1762638602b4426b61": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_bad2d4c_kikVja": {
+          "type": "ai_gen_block_bad2d4c",
+          "settings": {
+            "heading": "Sale Ends Soon!",
+            "message": "<p>Don't miss out on our amazing deals</p>",
+            "end_date": "2025-11-14",
+            "end_time": "",
+            "show_days": true,
+            "show_hours": true,
+            "show_minutes": true,
+            "show_seconds": true,
+            "days_label": "Days",
+            "hours_label": "Hours",
+            "minutes_label": "Minutes",
+            "seconds_label": "Seconds",
+            "text_alignment": "center",
+            "max_width": 800,
+            "timer_gap": 16,
+            "unit_width": 80,
+            "spacing": 16,
+            "background_color": "#121212",
+            "heading_color": "#FFFFFF",
+            "number_color": "#FFFFFF",
+            "label_color": "#FFFFFF",
+            "message_color": "#FFFFFF",
+            "box_background": "#334FB4",
+            "heading_size": 32,
+            "number_size": 48,
+            "label_size": 12,
+            "message_size": 16,
+            "box_padding": 16,
+            "box_radius": 4,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_horizontal": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bad2d4c_kikVja"
+      ],
+      "settings": {}
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -78,6 +125,7 @@
     }
   },
   "order": [
+    "1762638602b4426b61",
     "image_banner",
     "featured_collection"
   ]

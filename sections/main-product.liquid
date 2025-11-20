@@ -105,6 +105,12 @@
                     </h2>
                   </a>
                 </div>
+              {%- when 'fabric' -%}
+                <div>
+                  <p>
+                    <strong>Fabric: {{ product.metafields.custom.fabric }}</strong>
+                  </p>
+                </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -746,6 +752,10 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "fabric",
+      "name": "fabric"
     },
     {
       "type": "text",

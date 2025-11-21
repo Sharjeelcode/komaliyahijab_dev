@@ -20,6 +20,24 @@
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
+<style>
+  .media img {
+    position: relative;
+  }
+  .new-arrival-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    margin: 0px !important;
+    background-color: #121212;
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 4px;
+  }
+</style>
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
@@ -59,6 +77,11 @@
       >
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+            {% if card_product.metafields.custom.new_arrival != blank %}
+              <h3 class="new-arrival-badge">
+                {{ card_product.metafields.custom.new_arrival }}
+              </h3>
+            {% endif %}
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img

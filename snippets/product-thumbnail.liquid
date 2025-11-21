@@ -77,6 +77,7 @@
       {% endcase %}
     </span>
     {%- render 'loading-spinner' -%}
+
     <div class="product__media media media--transparent">
       {{
         media.preview_image
@@ -88,6 +89,26 @@
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
     </div>
+    <style>
+      .new-arrival-badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        margin: 0px !important;
+        background-color: #121212;
+        color: #fff;
+        padding: 10px 5px;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 10;
+        border-radius: 4px;
+      }
+    </style>
+    {% if product.metafields.custom.new_arrival != blank %}
+      <h3 class="new-arrival-badge">
+        {{ product.metafields.custom.new_arrival }}
+      </h3>
+    {% endif %}
     <button
       class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
       type="button"
